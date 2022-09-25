@@ -1,0 +1,11 @@
+function xfoiltest
+
+pol = xfoil('NACA24012',-5:0.05:20,5e5,0.08,'oper iter 100','oper/vpar n 9');
+% Plot the results
+figure; 
+subplot(2,2,1);
+plot(pol.alpha,pol.CL); xlabel('alpha [\circ]'); ylabel('C_L'); title(pol.name);
+subplot(2,2,2);
+plot(pol.alpha,pol.CM); xlabel('alpha [\circ]'); ylabel('C_L'); title(pol.name);
+
+end
