@@ -6,16 +6,16 @@
 % second method uses Cht and Cvt values as inputs (acquired using
 % historical data) to calculate Sht and Svt
 
-Lht = 30; % distance from cg estimate at wing to quarter-chord of horizontal tail (in)
-Lvt = 5; % distance from cg estimate at wing to quarter-chord of vertical tail (in)
+Lht = 27; % distance from cg estimate at wing to quarter-chord of horizontal tail (in)
+Lvt = 4; % distance from cg estimate at wing to quarter-chord of vertical tail (in)
    
     % Comment out the next two lines if using method 2
 %Sht = 200; % total planform area of the horizontal tail section in square inches
 %Svt = 300; % exposed side area of vertical tail section in square inches
 
-Sref = 600; % reference wing area in square inches
+Sref = 864; % reference wing area in square inches
 c = 7; % wing mean aerodynamic chord
-b = 60; % wing span in inches
+b = 64; % wing span in inches
 
     % Comment out the next two lines if using method 2
 %Cht = (Lht*Sht)/(c*Sref) % should be ~0.8
