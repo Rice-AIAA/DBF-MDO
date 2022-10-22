@@ -12,7 +12,7 @@ l_t=x;
 disp(l_t);
 hold on
 n = 1;
-x = 1:0.025:4;
+x = 0.5:0.025:2;
 for i = x
     %disp(i)
     %disp(min_H)
@@ -39,11 +39,12 @@ min_W = input(4);
 b = 5; % wingspan
 S_ref = 5.25; % surface area of wing
 mac = 1.05; % mean aerodynamic chord
-OD = 0.5/12; % OD of the boom
+OD = 0.75/12; % OD of the boom
+ID = OD - (2*0.075/12); % ID of the boom
 rho_CF = 124.855; % density of carbon fiber
-W_boom = (OD^2)*(x-0.75*mac+2/12)*rho_CF; % weight of boom
-C_HT = 0.8;
-C_VT = 0.07;
+W_boom = ((OD^2)-(ID^2))*(x-0.75*mac-(4.29/12))*rho_CF; % weight of boom
+C_HT = 0.5; %0.8
+C_VT = 0.05; %0.07
 S_HT=C_HT*mac*S_ref/x; % surface area of horizontal tail
 S_VT=C_VT*b*S_ref/x; % surface area of vertical tail
 S_T=S_HT+S_VT;
